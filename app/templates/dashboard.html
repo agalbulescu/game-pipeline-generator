@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Pipeline Generator</h1>
+    
+    <!-- Your existing game selection HTML will go here -->
+    <div id="game-selection">
+        <!-- We'll integrate your original HTML here -->
+    </div>
+    
+    <div class="controls">
+        <select id="branch-select">
+            <option value="main">main</option>
+            <option value="develop">develop</option>
+        </select>
+        <button id="generate-btn">Generate Pipeline</button>
+    </div>
+    
+    <div id="pipeline-status"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
