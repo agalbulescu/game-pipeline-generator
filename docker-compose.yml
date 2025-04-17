@@ -5,9 +5,8 @@ services:
       - "5000:5000"
     environment:
       - FLASK_ENV=development
-      - GITLAB_TOKEN=your-token
-      - PROJECT_ID=your-project-id
-      - ALLOWED_USERS=user1,user2
+      - SECRET_KEY=your-secret-key-here
+      - ALLOWED_USERS=user1,user2,user3
     volumes:
       - .:/app
     restart: unless-stopped

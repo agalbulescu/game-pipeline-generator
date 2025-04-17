@@ -10,6 +10,11 @@ def index():
         return render_template('login.html')
     return render_template('dashboard.html')
 
+@bp.route('/login')
+def login():
+    # This is just to handle the redirect if someone tries to access /login directly
+    return redirect(url_for('main.index'))
+
 @bp.route('/generate', methods=['POST'])
 @login_required
 def generate():

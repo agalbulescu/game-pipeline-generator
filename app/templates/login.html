@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Select User</h1>
-<form method="POST" action="{{ url_for('main.login') }}">
+<form method="POST" action="{{ url_for('auth.login') }}">
     <select name="username" required>
         {% for user in config.ALLOWED_USERS %}
         <option value="{{ user }}">{{ user }}</option>
